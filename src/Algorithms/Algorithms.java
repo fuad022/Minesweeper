@@ -29,7 +29,8 @@ public class Algorithms {
         Scanner s = new Scanner (new File("D:\\test.txt")).useDelimiter("\\s+");
         while (s.hasNext()) {
             if (s.hasNextInt()) { // check if next token is an int
-                System.out.print(s.nextInt() + "\n"); // display the found integer
+//                System.out.print(s.nextInt() + "\n"); // display the found integer
+                System.out.print(s.nextInt() + " ");
             } else {
                 s.next(); // else read the next token
             }
