@@ -8,16 +8,14 @@ import sun.plugin.javascript.navig.Array;
 public class Quicksort {
 
     private int array[];
-    private int length;
 
-
-    public void sort(int[] inputArr) {
+    private void sort(int[] inputArr) {
 
         if (inputArr == null || inputArr.length == 0) {
             return;
         }
         this.array = inputArr;
-        length = inputArr.length;
+        int length = inputArr.length;
         quickSort(0, length - 1);
     }
 
@@ -29,12 +27,12 @@ public class Quicksort {
         int pivot = array[lowerIndex + (higherIndex - lowerIndex) / 2];
         // Divide into two arrays
         while (i <= j) {
-            /**
-             * In each iteration, we will identify a number from left side which
-             * is greater then the pivot value, and also we will identify a number
-             * from right side which is less then the pivot value. Once the search
-             * is done, then we exchange both numbers.
-             */
+//            /**
+//             * In each iteration, we will identify a number from left side which
+//             * is greater then the pivot value, and also we will identify a number
+//             * from right side which is less then the pivot value. Once the search
+//             * is done, then we exchange both numbers.
+//             */
             while (array[i] < pivot) {
                 i++;
             }
