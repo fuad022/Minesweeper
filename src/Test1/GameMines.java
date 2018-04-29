@@ -7,33 +7,34 @@ import java.util.*;
 import java.util.Timer;
 
 
-
 public class GameMines extends JFrame {
-    final String TITLE_OF_PROGRAM = "Mines";
-    final String SIGN_OF_FLAG = "f";
-    final int BLOCK_SIZE = 30; // size of one block
-    final int FIELD_SIZE = 10; // in blocks
-    final int FIELD_DX = 6; // determined experimentally
-    final int FIELD_DY = 28 + 17;
-    final int START_LOCATION = 200;
-    final int MOUSE_BUTTON_LEFT = 1; // for mouse listener
-    final int MOUSE_BUTTON_RIGHT = 3;
-    final int NUMBER_OF_MINES = 10;
-    final int[] COLOR_OF_NUMBERS = {0x0000FF, 0x008000, 0xFF0000, 0x800000, 0x0};
-    Cell[][] field = new Cell[FIELD_SIZE][FIELD_SIZE];
-    Random random = new Random();
-    int countOpenedCells;
-    boolean youWon, bangMine; // flags for win and bang/fail
-    int bangX, bangY; // for fix the coordinates of the explosion
+    private final String TITLE_OF_PROGRAM = "Mines";
+    private final String SIGN_OF_FLAG = "f";
+    private final int BLOCK_SIZE = 30; // size of one block
+    private final int FIELD_SIZE = 10; // in blocks
+    private final int FIELD_DX = 6; // determined experimentally
+    private final int FIELD_DY = 28 + 17;
+    private final int START_LOCATION = 200;
+    private final int MOUSE_BUTTON_LEFT = 1; // for mouse listener
+    private final int MOUSE_BUTTON_RIGHT = 3;
+    private final int NUMBER_OF_MINES = 10;
+    private final int[] COLOR_OF_NUMBERS = {0x0000FF, 0x008000, 0xFF0000, 0x800000, 0x0};
+    private Cell[][] field = new Cell[FIELD_SIZE][FIELD_SIZE];
+    private Random random = new Random();
+    private int countOpenedCells;
+    private boolean youWon, bangMine; // flags for win and bang/fail
+    private int bangX, bangY; // for fix the coordinates of the explosion
 
     public static void main(String[] args) {
         new GameMines();
     }
 
-    GameMines() {
+    private GameMines() {
         setTitle(TITLE_OF_PROGRAM);
         setDefaultCloseOperation(EXIT_ON_CLOSE);
-        setBounds(START_LOCATION, START_LOCATION, FIELD_SIZE * BLOCK_SIZE + FIELD_DX, FIELD_SIZE * BLOCK_SIZE + FIELD_DY);
+        setBounds(START_LOCATION, START_LOCATION,
+                FIELD_SIZE * BLOCK_SIZE + FIELD_DX,
+                FIELD_SIZE * BLOCK_SIZE + FIELD_DY);
         setResizable(false);
         final TimerLabel timeLabel = new TimerLabel();
         timeLabel.setHorizontalAlignment(SwingConstants.CENTER);
@@ -67,7 +68,7 @@ public class GameMines extends JFrame {
         initField();
     }
 
-    void openCells(int x, int y) { // recursive procedure of opening the cells
+    private void openCells(int x, int y) { // recursive procedure of opening the cells
         if (x < 0 || x > FIELD_SIZE - 1 || y < 0 || y > FIELD_SIZE - 1) return; // wrong coordinates
         if (!field[y][x].isNotOpen()) return; // cell is already open
         field[y][x].open();
@@ -76,7 +77,7 @@ public class GameMines extends JFrame {
             for (int dy = -1; dy < 2; dy++) openCells(x + dx, y + dy);
     }
 
-    void initField() { // initialization of the playing field
+    private void initField() { // initialization of the playing field
         int x, y, countMines = 0;
         // create cells for the field
         for (x = 0; x < FIELD_SIZE; x++)
