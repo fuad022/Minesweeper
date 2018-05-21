@@ -1,6 +1,6 @@
 package Example;
 
-public class Example {
+public class Merge {
 
     // Merges two subarrays of arr[].
     // First subarray is arr[l..m]
@@ -86,7 +86,7 @@ public class Example {
         System.out.println("Given Array");
         printArray(arr);
 
-        Example ob = new Example();
+        Merge ob = new Merge();
         ob.sort(arr, 0, arr.length - 1);
 
         System.out.println("\nSorted array");
