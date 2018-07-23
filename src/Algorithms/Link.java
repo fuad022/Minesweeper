@@ -47,15 +47,15 @@ public class Link {
 //
 //        System.out.println("ArrayList time: " + arrayResultTime);
 //
-//        long linkedListTime = System.currentTimeMillis();
-//
-////        linkedList.add(500, 1203);
-////        linkedList.remove(500);
-//        linkedList.get(100000);
-//
-//        long linkedResultTime = System.currentTimeMillis() - linkedListTime;
-//
-//        System.out.println("LinkedList time: " + linkedResultTime);
+        long linkedListTime = System.currentTimeMillis();
+
+//        linkedList.add(500, 1203);
+//        linkedList.remove(500);
+        linkedList.get(100000);
+
+        long linkedResultTime = System.currentTimeMillis() - linkedListTime;
+
+        System.out.println("LinkedList time: " + linkedResultTime);
 
     }
 
