@@ -3,8 +3,8 @@ package OOP;
 public class RobotManager {
 
     public static void main(String[] args) {
-        // Создаем объекта класса Robot
-        Robot robot = new Robot();
+        // Создаем объекта класса Robot - теперь с параметрами
+        Robot robot = new Robot(20, 20);
 
         // Вперед на 20 метров
         robot.forward(20);

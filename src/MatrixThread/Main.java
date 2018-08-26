@@ -8,7 +8,8 @@ import java.util.Random;
 
 public class Main {
 
-    /** Заполнение матрицы случайными числами.
+    /**
+     * Заполнение матрицы случайными числами.
      *
      * @param matrix Заполняемая матрица.
      */
@@ -23,15 +24,16 @@ public class Main {
 
     //
 
-    /** Вывод матрицы в файл.
+    /**
+     * Вывод матрицы в файл.
      * Производится выравнивание значений для лучшего восприятия.
      *
      * @param fileWriter Объект, представляющий собой файл для записи.
-     * @param matrix Выводимая матрица.
+     * @param matrix     Выводимая матрица.
      * @throws IOException
      */
     private static void printMatrix(final FileWriter fileWriter,
-                                   final int[][] matrix) throws IOException {
+                                    final int[][] matrix) throws IOException {
 
         boolean hasNegative = false;         // Признак наличия в матрице отрицательных чисел.
         int maxValue = 0;                    // Максимальное по модулю число в матрице.
@@ -75,10 +77,10 @@ public class Main {
      * @param resultMatrix Результирующая матрица.
      */
     private static void printAllMatrix(final String fileName,
-                                      final int[][] firstMatrix,
-                                      final int[][] secondMatrix,
-                                      final int[][] resultMatrix) {
-        
+                                       final int[][] firstMatrix,
+                                       final int[][] secondMatrix,
+                                       final int[][] resultMatrix) {
+
         try (final FileWriter fileWriter = new FileWriter(fileName, false)) {
 
             fileWriter.write("First matrix:\n");
@@ -95,14 +97,15 @@ public class Main {
         }
     }
 
-    /** Однопоточное умножение матриц.
+    /**
+     * Однопоточное умножение матриц.
      *
      * @param firstMatrix  Первая матрица.
      * @param secondMatrix Вторая матрица.
      * @return Результирующая матрица.
      */
     private static int[][] multiplyMatrix(final int[][] firstMatrix,
-                                      final int[][] secondMatrix) {
+                                          final int[][] secondMatrix) {
 
         final int rowCount = firstMatrix.length;                 // Число строк результирующей матрицы.
         final int colCount = secondMatrix[0].length;             // Число столбцов результирующей матрицы.
@@ -120,11 +123,12 @@ public class Main {
         return result;
     }
 
-    /** Многопоточное умножение матриц.
+    /**
+     * Многопоточное умножение матриц.
      *
      * @param firstMatrix  Первая (левая) матрица.
      * @param secondMatrix Вторая (правая) матрица.
-     * @param threadCount Число потоков.
+     * @param threadCount  Число потоков.
      * @return Результирующая матрица.
      */
     private static int[][] multiplyMatrixMT(final int[][] firstMatrix,
@@ -132,7 +136,7 @@ public class Main {
                                             int threadCount) {
 
         assert threadCount > 0;
-        
+
         final int rowCount = firstMatrix.length;                   // Число строк результирующей матрицы.
         final int colCount = secondMatrix.length;                  // Число столбцов результирующей матрицы.
         final int[][] result = new int[rowCount][colCount];        // Результирующая матрица.
@@ -165,15 +169,25 @@ public class Main {
         return result;
     }
 
-    /** Число строк первой матрицы. */
+    /**
+     * Число строк первой матрицы.
+     */
     private final static int FIRST_MATRIX_ROWS = 10;
-    /** Число столбцов первой матрицы. */
+    /**
+     * Число столбцов первой матрицы.
+     */
     private final static int FIRST_MATRIX_COLS = 10;
-    /** Число строк второй матрицы (должно совпадать с числом столбцов первой матрицы). */
+    /**
+     * Число строк второй матрицы (должно совпадать с числом столбцов первой матрицы).
+     */
     private final static int SECOND_MATRIX_ROWS = FIRST_MATRIX_COLS;
-    /** Число столбцов второй матрицы. */
+    /**
+     * Число столбцов второй матрицы.
+     */
     private final static int SECOND_MATRIX_COLS = 10;
-    /** Сохранение матрицы в локальном диске */
+    /**
+     * Сохранение матрицы в локальном диске
+     */
     private final static String FILE_NAME = "C:\\Users\\admin\\Desktop\\Exmpl\\Matrix.txt";
 
     public static void main(String[] args) {
@@ -191,7 +205,7 @@ public class Main {
 
         // Проверка многопоточных вычислений с помощью однопоточных.
         final int[][] resultMatrix = multiplyMatrix(firstMatrix, secondMatrix);
-        
+
         for (int row = 0; row < FIRST_MATRIX_ROWS; ++row) {
             for (int col = 0; col < FIRST_MATRIX_COLS; ++col) {
                 if (resultMatrixMT[row][col] != resultMatrix[row][col]) {

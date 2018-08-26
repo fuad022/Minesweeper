@@ -8,6 +8,12 @@ public class Robot {
     private double y = 0;
     //Текущий курс (в градусах)
     private double course = 0;
+
+    // Вот наш конструктор, который выполняет присвоение.
+    public Robot(double x, double y) {
+        this.x = x;
+        this.y = y;
+    }
     
     // Передвижение на дистанцию distance
     // учтите, что угол надо передавать в радианах. Для того, что бы работать в градусах

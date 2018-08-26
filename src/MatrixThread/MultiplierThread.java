@@ -2,17 +2,29 @@ package MatrixThread;
 
 public class MultiplierThread extends Thread {
 
-    /** Первая (левая) матрица. */
+    /**
+     * Первая (левая) матрица.
+     */
     private final int[][] firstMatrix;
-    /** Вторая (правая) матрица. */
+    /**
+     * Вторая (правая) матрица.
+     */
     private final int[][] secondMatrix;
-    /** Результирующая матрица. */
+    /**
+     * Результирующая матрица.
+     */
     private final int[][] resultMatrix;
-    /** Начальный индекс. */
+    /**
+     * Начальный индекс.
+     */
     private final int firstIndex;
-    /** Конечный индекс. */
+    /**
+     * Конечный индекс.
+     */
     private final int lastIndex;
-    /** Число членов суммы при вычислении значения ячейки. */
+    /**
+     * Число членов суммы при вычислении значения ячейки.
+     */
     private final int sumLength;
 
     /**
@@ -37,7 +49,8 @@ public class MultiplierThread extends Thread {
         sumLength = secondMatrix.length;
     }
 
-    /**Вычисление значения в одной ячейке.
+    /**
+     * Вычисление значения в одной ячейке.
      *
      * @param row Номер строки ячейки.
      * @param col Номер столбца ячейки.
@@ -49,7 +62,9 @@ public class MultiplierThread extends Thread {
         resultMatrix[row][col] = sum;
     }
 
-    /** Рабочая функция потока. */
+    /**
+     * Рабочая функция потока.
+     */
     @Override
     public void run() {
         System.out.println("Thread" + getName() + " started. Calculating cells from " + firstIndex + " to " + lastIndex + " ... ");

@@ -6,7 +6,6 @@ import javax.swing.*;
 import java.util.*;
 import java.util.Timer;
 
-
 public class GameMines extends JFrame {
     private final String TITLE_OF_PROGRAM = "Mines";
     private final String SIGN_OF_FLAG = "f";
