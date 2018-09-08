@@ -1,6 +1,7 @@
 package SimpleExer;
 
-import java.io.PrintWriter;
+import java.io.*;
+import java.net.*;
 import java.time.LocalDate;
 import java.util.*;
 import java.util.LinkedList;
@@ -398,17 +399,87 @@ public class Simple {
 //    }
     ///////////////////////////////////////////////////////////////////////////////
 
-    public static void main(String[] args) {
-//        Object o1 = null;
-//        Object o2 = null;
-        Object o1 = new Object();
-        Object o2 = new Object();
-//        Integer o1 = new Integer(5);
-//        Integer o2 = new Integer(5);
-        System.out.println(o1.equals(o2));
-        System.out.println(o1 == o2);
-    }
+//    public static void main(String[] args) {
+////        float a = 7.1f;
+////        double b = 8.25;
+////        int c = 35_000;
+////        long d = 1_000_000_000_000L;
+////        Object o1 = null;
+////        Object o2 = null;
+//        Object o1 = new Object();
+//        Object o2 = new Object();
+////        Integer o1 = new Integer("5");
+////        Integer o2 = new Integer("5");
+////        String o1 = new String("hello");
+////        String o2 = new String("hello");
+//        System.out.println(o1.equals(o2));
+//        System.out.println(o1 == o2);
+//    }
+    ////////////////////////////////////////////////////////////////////////////////
+
+//    public static void main(String[] args) {
+////
+////        int[] primes = {1, 2, 3, 4, 5};
+////        int[] numbers = primes;
+////
+////        System.out.println(numbers[4]);
+//        String s = "acdef";
+//        StringBuilder stringBuilder = new StringBuilder(s);
+//        stringBuilder.reverse();
+//        System.out.println(stringBuilder.toString());
+//    }
+    /////////////////////////////////////////////////////////////////////////////////
+
+    //    public static void main(String[] args) {
+//        int i = 0;
+//        int j = 1;
+//        System.out.println(i += (j < i) ? (2) : (3));
+//    }
+    /////////////////////////////////////////////////////////////////////////////////
+//    public static void main(String[] bicycle) {
+//        System.out.println(bicycle[0]);
+//    }
+    //////////////////////////////////////////////////////////////////////////////////
+//    public static void main(String[] args) {
+//        char c1 = '1';
+//        char c2 = '\u0031';
+//        char c3 = 49;
+//        System.out.println(c1);
+//        System.out.println(c2);
+//        System.out.println(c3);
+//        System.out.println(c1 + c2 + c3);
+//    }
+    //////////////////////////////////////////////////////////////////////////////////
+
+//    public static final int N = 5;
+//
+//    public static void main(String[] args) {
+//        int m[][][] = new int[N][N][N];
+//        label:
+//        for (int i = 0; i < N; ++i)
+//            for (int j = 0; j < N; ++j)
+//                for (int k = 0; k < N; ++k) {
+//                    m[i][j][k] = i * j * k;
+//                    if (m[i][j][k] == 9) {
+//                        System.out.print("9 ");
+//                        continue label;
+//                    }
+//                }
+//    }
+    //////////////////////////////////////////////////////////////////////////////////
+
+//    public static void main(String[] args) {
+//        label:
+//        for (int i = 0; i < 5; ++i) {
+//            for (int j = 0; j < 5; ++j) {
+//                if (i > 2) break label;
+//                System.out.print(j);
+//            }
+//            System.out.print(" ");
+//        }
+//    }
 }
+
 
 //class Main {
 //    public static void main(String[] args) {
