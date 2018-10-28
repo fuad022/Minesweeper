@@ -265,48 +265,7 @@ public class Simple {
 //            System.out.print(newA[i] + " ");
 //        }
 //    }
-    ////////////////////////////////////////////////////////////////////////////////////////
-
-//    public static void main(String[] args) {
-//        int i = 1221;
-//        String a = Integer.toString(i);
-////        String a = "12";
-//        StringBuffer sb = new StringBuffer(a).reverse();
-//        String strRev = sb.toString();
-//        System.out.println(strRev);
-//        if (strRev.equalsIgnoreCase(a)) {
-//            System.out.println("Palindrome");
-//        } else {
-//            System.out.println("Not palindrome");
-//        }
-//    }
-    ////////////////////////////////////////////////////////////////////////////////////////
-
-//    public static void main(String[] args) {
-//        String s = "2551";
-//        Simple simple = new Simple();
-//        simple.isPalindrome(s);
-////        int n = s.length();
-////        for (int i = 0; i < (n / 2); ++i) {
-////            if (s.charAt(i) != s.charAt(n - i - 1)) {
-////                System.out.println("Not Palindrome");
-////            } else {
-////                System.out.println("Palindrome");
-////            }
-////        }
-//    }
-//
-//    private boolean isPalindrome(String s) {
-//        int n = s.length();
-//        for (int i = 0; i < (n / 2); ++i) {
-//            if (s.charAt(i) != s.charAt(n - i - 1)) {
-//                System.out.println("Not palindrome");
-//                return false;
-//            }
-//        }
-//        System.out.println("Palindrome");
-//        return true;
-//    }
+    /////////////////////////////////////////////////////////////////////////
     /////////////////////////////////////////////////////////////////////////
 
 //    public static void main(String[] args) {
@@ -374,21 +333,6 @@ public class Simple {
 //        System.out.println(localDate.withDayOfMonth(1));
 //    }
     ///////////////////////////////////////////////////////////////////////////////
-
-//    public static void main(String[] args) {
-//        int[] arr = new int[]{2, 6, 41, 45, 9, 25, 45, 40, 30};
-//        int max = arr[0];
-//        int count = 0;
-//        for (int i = 0; i < arr.length; i++) {
-//            if (arr[i] > max) {
-//                max = arr[i];
-//            } else if (arr[i] == max) {
-//                count++;
-//            }
-//        }
-//        System.out.println("Max number is: " + max);
-//        System.out.println("Max number count is: " + count);
-//    }
     ///////////////////////////////////////////////////////////////////////////////
 
 //    public static void main(String[] args) {
@@ -478,11 +422,136 @@ public class Simple {
 //            System.out.print(" ");
 //        }
 //    }
-}
+    ///////////////////////////////////////////////////////////////////////////////////
 
-
-//class Main {
 //    public static void main(String[] args) {
+//        int x = 1;
+//        int y = 15;
 //
+//        while (x < 10)
+//            y--;
+//            x++;
+//        System.out.println(x + ", " + y);
 //    }
-//}
+    ///////////////////////////////////////////////////////////////////////////////////
+
+//    public static void main(String[] args) {
+//        Object ref;
+//        while (true)
+//            ref = new Object();
+//    }
+    //////////////////////////////////////////////////////////////////////////////////
+
+//    public static void main(String[] args) {
+//        System.out.println(sq(2, 10));
+//    }
+//
+//    private static int sq(int a, int b) {
+//        int res = a;
+//        while (b != 1) {
+//            res *= a;
+//            b--;
+//        }
+//        return res;
+//    }
+    //////////////////////////////////////////////////////////////////////////////////
+
+//    private Simple() {
+////        return this;    //конструктор ничего не должен возвращать.
+//    }
+//
+//    public static Simple get() {
+//        return new Simple();
+//    }
+//
+//    public static void main(String[] args) {
+//        Simple simple1 = get();
+//        Simple simple2 = new Simple();
+//        System.out.println(simple1);
+//        System.out.println(simple2);
+//    }
+    //////////////////////////////////////////////////////////////////////////////////
+//
+//    public static void main(String[] args) {
+//        byte a = 3;
+//        short b = 4;
+//        compute(a, b);
+//    }
+//
+//    public static void compute(short x, short y) {
+//        System.out.println("Short: " + (x + y) + (x + y));
+//    }
+    //////////////////////////////////////////////////////////////////////////////////
+
+//    public static void main(String[] args) {
+//        int a = 2;
+//        int b = 3;
+//        System.out.println("suma: " + (a + b));
+//    }
+    //////////////////////////////////////////////////////////////////////////////////
+
+//    public static void main(String[] args) {
+//        byte a = 40, b = 50;
+//        byte sum = (byte)(a + b);
+//        System.out.println(sum);
+//    }
+    //////////////////////////////////////////////////////////////////////////////////
+
+//    public static void main(String[] args) {
+////        int i = 0, j = 5;
+//        System.out.println("hello");
+//        lab1:
+//        return;
+////        for (; ; i++) {
+////            for (; ; --j)
+////                if (i > j)
+////                    break lab1;
+////        }
+////        System.out.println("i = " + i + ", j = " + j);
+//    }
+    ///////////////////////////////////////////////////////////////////////////////////
+
+//    public static void main(String[] args) {
+//        String a = "aaa";
+//        String b = "aaa";
+//        Simple s1 = new Simple();
+//        Simple s2 = new Simple();
+//        StringBuilder string = new StringBuilder("aaa");
+//        StringBuilder stringBuilder1 = new StringBuilder("hello");
+//        StringBuilder stringBuilder2 = new StringBuilder("hello");
+//        System.out.println(a.equals(string));                        //false
+//        System.out.println(stringBuilder1.equals(stringBuilder2));   //false
+//        System.out.println(stringBuilder1 == stringBuilder2);        //false
+//        System.out.println(stringBuilder1.hashCode());
+//        System.out.println(stringBuilder2.hashCode());
+//        System.out.println("/////////////////////////////");
+//        System.out.println("a: " + a.hashCode());
+//        System.out.println("b: " + b.hashCode());
+//        System.out.println(a.equals(b));
+//        System.out.println("/////////////////////////////");
+//        System.out.println("s1: " + s1.hashCode());
+//        System.out.println("s2: " + s2.hashCode());
+//        System.out.println(s1.equals(s2));
+//    }
+    ////////////////////////////////////////////////////////////////////////
+
+//    public static void main(String[] args) {
+//        System.out.println(ins());
+//    }
+//
+//    private static int ins() {
+//        for (int i = 1; i < 10; i++) {
+//            return i;
+//        }
+//        return 0;
+//    }
+    /////////////////////////////////////////////////////////////////////////
+
+    public static void main(String[] args) {
+        for (int i = 0; i < 4; i++) {
+            for (int j = i; j < 4; j++) {
+                System.out.println("*");
+            }
+        }
+    }
+}
